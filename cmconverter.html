@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>converter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <style>
+      .dial {
+        height: 20rem;
+        width: 20rem;
+
+        margin: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
+      #number {
+        border: 2px solid rgb(98, 200, 226);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dial bg-green-800 rounded-lg">
+      <h1 class="text-2xl font-bold" id="text">Inch to CM</h1>
+      <br />
+      <input
+        type="text"
+        id="number"
+        placeholder="Enter the number"
+        class="rounded-sm h-10"
+      /><br />
+      <button class="bg-yellow-300 rounded-md font-bold p-2" onclick="answer()">
+        calculate
+      </button>
+
+      <div id="result" class="bg-white font-bold rounded-lg"></div>
+    </div>
+    <script>
+      function answer() {
+        const number = Number(document.getElementById("number").value);
+        const cmVal = number * 2.54;
+        const result = document.getElementById("result");
+        result.innerHTML = "your result is =" + cmVal.toFixed(2) + "cms";
+        result.style.padding = "10px";
+      }
+    </script>
+  </body>
+</html>

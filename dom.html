@@ -1,0 +1,166 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom manipulation</title>
+  </head>
+  <body>
+    <p id="one">gowtham</p>
+  </body>
+  <script>
+    var p = document.getElementById("one");
+    console.log(p.textContent);
+    p.textContent = "raj";
+  </script>
+</html> -->
+
+<!-- <h1 id="title">hello world</h1>
+<button onclick="change()">change</button>
+
+<script>
+  var h = document.getElementById("title");
+  console.log(h.textContent);
+  // h.textContent = "byeworld";
+  function change() {
+    h.textContent = "Bye World";
+  }
+</script> -->
+<!-- //add two numbers// -->
+<!-- <input id="no1" />
+<input id="no2" />
+<button onclick="resultf()">add</button>
+<p id="result">reusult</p>
+<script>
+  // selecting input box 1
+  // selecting input box 2
+  var b1 = document.getElementById("no1");
+  var b2 = document.getElementById("no2");
+  var result = document.getElementById("result");
+
+  function resultf() {
+    var b1value = Number(b1.value);
+    var b2value = Number(b2.value);
+
+    var total = b1value + b2value;
+    result.textContent = total;
+  }
+</script> -->
+
+<!-- guess number -->
+
+<!-- <h1>guess the number</h1>
+<input id="guessno" />
+<button onclick="check()">check</button>
+<p id="result">you are right/wrong</p>
+<p id="score">score:10</p>
+<script>
+  var gn = document.getElementById("guessno");
+  var result = document.getElementById("result");
+  var randomNumber = Math.floor(Math.random() * 2) + 1;
+
+  var score = document.getElementById("score");
+  var s = 10;
+  function check() {
+    var enteredNumber = gn.value;
+    console.log(enteredNumber);
+    if (randomNumber == enteredNumber) {
+      console.log("right");
+      result.textContent = "right";
+      alert("you won");
+    } else {
+      s = s - 1;
+      score.textContent = "score:" + s;
+      console.log("wrong");
+      result.textContent = "wrong";
+      // alert("you lost");
+    }
+  }
+</script> -->
+
+<style>
+  #box {
+    background-color: brown;
+    height: 200px;
+    width: 200px;
+    /* display: inline-block; */
+    margin: 5px;
+  }
+  .g {
+    background-color: blue;
+    height: 200px;
+    width: 900px;
+  }
+</style>
+<div id="box"></div>
+<button onclick="change()">change color</button>
+<script>
+  var box = document.getElementById("box");
+  function change() {
+    container.style.backgroundColor = "blue";
+    box.setAttribute("class", "g");
+  }
+</script>
+
+<input type="text" id="inpt" onkeyup="print()" />
+<button onclick="print()">output</button>
+<h1 id="text"></h1>
+<script>
+  var inpt = document.getElementById("inpt");
+  var txt = document.getElementById("text");
+
+  function print() {
+    txt.textContent = inpt.value;
+  }
+</script>
+
+<button onclick="print()">add</button>
+<div id="result"></div>
+<script>
+  var div = document.getElementById("result");
+  function print() {
+    list = document.createElement("h1");
+    list.textContent = "hello";
+    div.append(list);
+  }
+</script>
+
+<button id="btn" onclick="color()">gowtham</button>
+<script>
+  var btn = document.getElementById("btn");
+  function color() {
+    btn.style.backgroundColor = "red";
+  }
+</script>
+
+<h1 id="result">name</h1>
+<button onclick="priint(event)">gowtham</button>
+<button onclick="priint(event)">naveen</button>
+<button onclick="priint(event)">surya</button>
+<script>
+  var h1 = document.getElementById("result");
+  function priint(event) {
+    h1.textContent = event.target.textContent;
+  }
+
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].onclick = function () {
+      result.innerHTML = this.innerText;
+    };
+  }
+</script>
+
+<!-- remove object -->
+
+<h1 onclick="deleteitem(event)">one</h1>
+<h1 onclick="deleteitem(event)">two</h1>
+<h1 onclick="deleteitem(event)">three</h1>
+<h1 onclick="deleteitem(event)">four</h1>
+<h1 onclick="deleteitem(event)">five</h1>
+<h1 onclick="deleteitem(event)">six</h1>
+
+<script>
+  function deleteitem(event) {
+    event.target.remove();
+  }
+</script>
